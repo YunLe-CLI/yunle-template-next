@@ -3,7 +3,9 @@
   "ignore": [
     ".git",
     "node_modules",
-    "test"
+    "test",
+    "app/public/*",
+    "app/view/*"
   ],
   "verbose": true,
   "execMap": {

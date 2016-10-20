@@ -1,0 +1,20 @@
+nginx:
+  image: nginx
+  ports:
+    - "80:80"
+  volumes:
+    - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+  command: nginx -g "daemon off;"
+  links:
+    - web:webServer
+web:
+  build: .
+  expose:
+    - "1337"
+  links:
+    - redis:usersRedis
+    - mongo:usersMongo
+redis:
+  image: redis
+mongo:
+  image: mongo
