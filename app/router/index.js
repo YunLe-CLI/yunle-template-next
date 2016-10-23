@@ -1,9 +1,9 @@
 'use strict';
 const Router = require('koa-router');
 const proxy = require('koa-proxy');
-const config = require('../configs/server.conf');
+const config = require('../../config/server.conf');
 const GraphQL = require('graphql');
-const schema = require('../controller/GraphQL');
+const schema = require('../controllers/GraphQL');
 
 const graphql = GraphQL.graphql;
 const routes = new Router();

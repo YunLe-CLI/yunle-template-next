@@ -13,7 +13,12 @@
   },
   "watch": [
     "index.js",
-    "app/*"
+    "config/*",
+    "app/controllers/*",
+    "app/extends/*",
+    "app/module/*",
+    "app/router/*",
+    "app/libs/*"
   ],
   "env": {
     "DEBUG": "koa*",
