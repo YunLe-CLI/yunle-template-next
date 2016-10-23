@@ -9,11 +9,11 @@ const render = require('koa-ejs');
 const gzip = require('koa-gzip');
 const bodyParser = require('koa-bodyparser');
 const routes = require('../app/router');
-const config = require('../config/server.conf');
+const config = require('../app/config/server.conf');
 
 global.Promise = promise;
 const app = koa();
-app.use(staticServer(path.join(__dirname, '../public')));
+app.use(staticServer(path.join(__dirname, '../app/public')));
 render(app, config.render);
 app.use(errorhandler());
 app.use(logger());

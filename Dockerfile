@@ -9,13 +9,15 @@ WORKDIR /web
 COPY . /web
 
 # Install app dependencies
-# COPY package.json /web
+# npm install -g cnpm --registry=https://registry.npm.taobao.org
 # RUN npm install --production
 
 # set app env
 ENV APP_ID 3387
 ENV APP_SECRET 4e0a682f5bb008f484bceba2634f1c95741c4cd7
 ENV AGENTX_ERROR_LOG /web/.logs/pm2-err.log
+
+VOLUME ["/web"]
 
 # Expose port
 EXPOSE 1337

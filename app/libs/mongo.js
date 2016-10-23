@@ -1,6 +1,6 @@
 'use strict';
 const mongoose = require('mongoose');
-const config = require('../../config/server.conf');
+const config = require('../config/server.conf');
 
 mongoose.Promise = global.Promise;
 // 连接

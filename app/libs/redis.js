@@ -1,5 +1,5 @@
 const redis = require('redis');
-const config = require('../../config/server.conf');
+const config = require('../config/server.conf');
 
 const REDIS_USER_PREFIX = 'server_module_';
 
