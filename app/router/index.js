@@ -7,6 +7,9 @@ const schema = require('../controllers/GraphQL');
 
 const graphql = GraphQL.graphql;
 const routes = new Router();
+
+const mockAPI = require('./API.mock.js')(routes);
+
 routes.get('/', function* () {
   yield this.render('index', {
     text: 'hello wold!',
