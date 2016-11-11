@@ -4,7 +4,9 @@
 
 1. `npm install -g yunle-cli`
 
-2. `yunle install production [项目目录名]`
+2. `yunle install gulp <project-name>`
+
+2. `cd <project-name> && npm install`
 
 ![前后端分离架构](doc/image.png)
 
