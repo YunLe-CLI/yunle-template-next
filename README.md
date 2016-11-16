@@ -1,4 +1,4 @@
-# 基础server
+# 基础server [![Build Status](https://travis-ci.org/hexiao-o/yunle-template-production.svg?branch=master)](https://travis-ci.org/hexiao-o/yunle-template-production)
 
 如使用该前端脚手架，可以先安装
 
