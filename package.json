@@ -10,7 +10,7 @@
     "pm2List": "pm2 list",
     "pm2Logs": "pm2 logs user-module",
     "dev": "nodemon -L index.js",
-    "test": "mocha --compilers js:babel-register"
+    "test": "mocha --recursive"
   },
   "author": "",
   "license": "ISC",
@@ -37,9 +37,10 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
     "eslint": "^3.8.1",
     "eslint-config-airbnb": "^12.0.0",
-    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
     "mocha": "^3.1.2",
