@@ -1,0 +1,279 @@
+.msg{color:#FFF;width:100%;height:1rem;text-align:center;font-size:.3rem;line-height:1rem;position:fixed;top: -1rem;z-index:999;}.msg_success{background-color:#1fcc6c;}.msg_warning{background-color:#e94b35;}.msg_primary{background-color:#337ab7;}.msg_info{background-color:#5bc0de;}
+html,body{
+  background: #ffffff;
+  font-family: 'PingFangSC-Regular', "robot", "helvetica", "微软雅黑", "Microsoft YaHei";
+  color: #666666;
+  letter-spacing: 0;
+}
+*{
+  -webkit-tap-highlight-color:transparent;
+}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+#wrap{
+  max-width: 750px;
+  margin: auto;
+  font-size: .28rem;
+  background: #ffffff;
+  #heade{
+    padding: .76rem .64rem .26rem .64rem;
+    background: #FF348D;
+    background-image: linear-gradient(-135deg, #E9AE20 0%, #FFAA43 35%, #FF348D 100%);
+    overflow: hidden;
+    .title{
+      position: relative;
+      padding: .77rem .4rem .66rem .4rem;
+      background: #FFFFFF;
+      box-shadow: 0 .4rem .5rem 0 rgba(0,0,0,0.20);
+    }
+    .picWrap{
+      position: absolute;
+      top: -.5rem;
+      left: 0;
+      right: 0;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: auto;
+      border: 2px solid #FFFFFF;
+      background: #fff;
+      box-shadow: 0 .3rem .4rem 0 rgba(0,0,0,0.10);
+      img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+    }
+    p{
+      margin: 0;
+      font-size: .3rem;
+      color: #050706;
+      letter-spacing: 0px;
+      overflow: hidden;
+      line-height: .5rem;
+    }
+    .p-title{
+      font-family: PingFangSC-Regular;
+      font-size: .4rem;
+      color: #050706;
+      letter-spacing: 0;
+    }
+    .p-info{
+      margin-top: .15rem;
+    }
+    .pic{
+      display: block;
+    }
+    .ugcInfo{
+
+    }
+  }
+  .main{
+    padding: .4rem 0 .4rem 0;
+    .daran-title{
+      margin: 0;
+      height: .4rem;
+      text-align: center;
+      position: relative;
+      &:after{
+          content: '';
+          position: absolute;
+          left: .3rem;
+          right: .3rem;
+          top: 0;
+          bottom: 0;
+          background: #E8E8E8;
+          height: 1px;
+          margin: auto;
+          -webkit-transform: scaleY(0.5);
+                  transform: scaleY(0.5);
+          -webkit-transform-origin: 0 0;
+                  transform-origin: 0 0;
+      }
+      .title-info{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 4;
+        margin: auto;
+        height: .4rem;
+        line-height: .4rem;
+        max-width: 1.5rem;
+        font-weight: normal;
+        font-family: PingFangSC-Regular;
+        font-size: .26rem;
+        color: #666666;
+        background: #fff;
+        padding: 0;
+      }
+    }
+    .daran-ul{
+      padding: 0 .3rem;
+      margin: 0;
+      list-style: none;
+    }
+    .daran-item{
+      position: relative;
+      padding: .15rem 0;
+      // border-bottom: 1px solid #E5E5E5;
+    }
+    .daran-item:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: #E5E5E5;
+        width: 100%;
+        height: 1px;
+        -webkit-transform: scaleY(0.5);
+                transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+    }
+    .daran-icon{
+      float: left;
+      margin: .2rem;
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #ccc;
+      box-shadow: 0px .2rem .3rem 0 rgba(0,0,0,0.10);
+    }
+    .item-one{
+      &.ok{
+        .icon-one{
+          background: url('../../images/icon-one-on.png') no-repeat center;
+          background-size: 100%;
+          box-shadow: 0 0 0;
+        }
+        .icon-ok{
+          display: block;
+        }
+        .daran-a{
+          display: none;
+        }
+        .daran-p{
+          display: none;
+        }
+        .daran-p-ok{
+          display: block;
+        }
+      }
+    }
+    .item-two{
+      &.ok{
+        .icon-two{
+          background: url('../../images/icon-two-on.png') no-repeat center;
+          background-size: 100%;
+          box-shadow: 0 0 0;
+        }
+        .icon-ok{
+          display: block;
+        }
+        .daran-a{
+          display: none;
+        }
+        .daran-p{
+          display: none;
+        }
+        .daran-p-ok{
+          display: block;
+        }
+      }
+    }
+    .item-three{
+      &.ok{
+        .icon-three{
+          background: url('../../images/icon-three-on.png') no-repeat center;
+          background-size: 100%;
+          box-shadow: 0 0 0;
+        }
+        .icon-ok{
+          display: block;
+        }
+        .daran-a{
+          display: none;
+        }
+        .daran-p{
+          display: none;
+        }
+        .daran-p-ok{
+          display: block;
+        }
+      }
+    }
+    .icon-one{
+      background: url('../../images/icon-one.png') no-repeat center;
+      background-size: 100%;
+    }
+    .icon-two{
+      background: url('../../images/icon-two.png') no-repeat center;
+      background-size: 100%;
+    }
+    .icon-three{
+      background: url('../../images/icon-three.png') no-repeat center;
+      background-size: 100%;
+    }
+    .daran-goto{
+      float: right;
+    }
+    .daran-a{
+      font-family: PingFangSC-Regular;
+      font-size: .26rem;
+      color: #3C97FF;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .icon-ok{
+      display: none;
+      width: .48rem;
+      height: 100%;
+      margin: 0 .2rem;
+      background: url('../../images/ok.png') no-repeat center;
+      background-size: 100% auto;
+      box-shadow: 0 0 0;
+    }
+    .daran-w{
+      display: table-cell;
+      height: 1.6rem;
+      vertical-align: middle;
+    }
+    .daran-content{
+      overflow: hidden;
+      padding: 0 .3rem;
+
+      .daran-info{
+        font-weight: normal;
+        margin: 0;
+        font-family: PingFangSC-Regular;
+        font-size: .3rem;
+        color: rgba(0,0,0,0.80);
+      }
+
+    }
+    .daran-p{
+      margin: .1rem 0 0 0;
+      font-family: PingFangSC-Regular;
+      font-size: .22rem;
+      color: #666666;
+    }
+    .daran-e{
+      color: #F5A623;
+    }
+    .daran-p-ok{
+      margin: .1rem 0 0 0;
+      display: none;
+      font-family: PingFangSC-Regular;
+      font-size: .22rem;
+      color: #F5A623;
+      font-weight: normal;
+    }
+  }
+
+}

@@ -4,12 +4,13 @@
   "description": "base server",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon -L index.js",
+    "qa": "pm2 start qa_process.json  --no-daemon",
     "start": "pm2 start process.json  --no-daemon",
     "pm2Stop": "pm2 stop process.json",
     "pm2Delete": "pm2 delete process.json",
     "pm2List": "pm2 list",
     "pm2Logs": "pm2 logs user-module",
-    "dev": "nodemon -L index.js",
     "test": "mocha --recursive"
   },
   "author": "",
