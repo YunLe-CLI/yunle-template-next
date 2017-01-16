@@ -1,28 +1,23 @@
-'use strict';
 const path = require('path');
+const config = require('../_config.js');
 
-const NODE_ENV = process.env.NODE_ENV === 'production';
-let host = 'localhost';
-if (NODE_ENV) {
-  host = 'usersMongo';
-}
+const NODE_ENV = process.env.NODE_ENV || 'development';
+const theme = config.theme;
+const rootPath = path.join(__dirname, '../themes', theme, 'dist');
+const themeConfig = require(path.join(__dirname, '../themes', theme, 'config/server.config.js')) || {};
 
 module.exports = {
-  env: !NODE_ENV,
-  port: NODE_ENV ? 1337 : 5000,
-  proxy: {
-    host: 'https://www.baidu.com/',
-    path: '/s',
-  },
+  env: NODE_ENV,
+  port: 8080,
+  proxys: themeConfig.proxys.pro || [],
+  router: themeConfig.router.pro || [],
+  public: rootPath,
   render: {
-    root: path.join(__dirname, '../view'),
+    root: rootPath,
     layout: false,
     viewExt: 'html',
-    cache: NODE_ENV,
-    debug: !NODE_ENV,
+    cache: false,
+    debug: true,
     delimiter: '%',
   },
-  mongodb: `mongodb://${host}:27017/yunle`,
-  redis: `redis://${host}:6379`,
-  amqp: 'amqp://localhost:5672',
 };

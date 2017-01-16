@@ -1,5 +1,3 @@
-'use strict';
-const path = require('path');
 const koa = require('koa');
 const promise = require('bluebird');
 const logger = require('koa-logger');
@@ -8,12 +6,12 @@ const staticServer = require('koa-static');
 const render = require('koa-ejs');
 const gzip = require('koa-gzip');
 const bodyParser = require('koa-bodyparser');
-const routes = require('../app/router');
+const routes = require('./router');
 const config = require('../config/server.conf');
 
 global.Promise = promise;
 const app = koa();
-app.use(staticServer(path.join(__dirname, '../public')));
+app.use(staticServer(config.public));
 render(app, config.render);
 app.use(errorhandler());
 app.use(logger());

@@ -11,10 +11,3 @@ web:
   build: .
   expose:
     - "1337"
-  links:
-    - redis:usersRedis
-    - mongo:usersMongo
-redis:
-  image: redis
-mongo:
-  image: mongo

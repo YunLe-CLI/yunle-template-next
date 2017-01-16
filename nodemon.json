@@ -14,11 +14,7 @@
   "watch": [
     "index.js",
     "config/*",
-    "app/controllers/*",
-    "app/extends/*",
-    "app/module/*",
-    "app/router/*",
-    "app/libs/*"
+    "app/**"
   ],
   "env": {
     "DEBUG": "koa*",

@@ -5,9 +5,9 @@
       "script"      : "./index.js",
       "node_args"   : "",
       "log_date_format"  : "YYYY-MM-DD HH:mm Z",
-      "out_file"   : ".logs/pm2-out.log",
-      "error_file" : ".logs/pm2-err.log",
-      "pid_file"   : "bin/web.pid",
+      "out_file"   : "logs/pm2-out.log",
+      "error_file" : "logs/pm2-err.log",
+      "pid_file"   : "app/web.pid",
       "ignoreWatch" : ["[\\/\\\\]\\./", "node_modules"],
       "watch"       : false,
       "env": {

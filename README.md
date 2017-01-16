@@ -15,8 +15,8 @@
 
 |`npm run <script>`|用途|
 |------------------|-----------|
-|`start`|生产环境服务启动在1337端口。|
-|`dev`|开发环境服务启动在5000端口。|
+|`start`|生产环境服务启动在8080端口。|
+|`dev`|开发环境服务启动在8080端口。|
 |`pm2Stop`|生产环境服务pm2停止服务。|
 |`pm2Delete`|生产环境服务pm2删除服务。|
 |`pm2List`|生产环境服务pm2启动列表。|
@@ -28,18 +28,12 @@
 ```
 .
 ├── app                      # 应用源文件
-│   ├── bin                  # koa程序
-│   |   └── server.js        # server程序
-│   ├── configs              # 程序配置文件
-│   |   └── server.conf.js   # 服务器配置文件
-│   ├── controller           # 程序控制器
-│   ├── dist                 # 静态资源打包目录
-│   ├── libs                 # 程序小工具
-│   ├── logs                 # 程序日志
-│   ├── module               # 程序module目录
-│   ├── public               # 主页静态资源源文件
-│   ├── routes               # 应用程序路由
-│   ├── view                 # 应用程序模板
+│   ├── server.js            # server程序
+│   └── router.js            # server路由
+├── configs                  # 程序配置文件
+│   └── server.conf.js   # 服务器配置文件
+├── logs                     # 程序日志
+├── themes                   # yunle-cli应用主题
 ├── nginx                    # nginx配置文件
 ├── test                     # 单元测试
 ├── Dockerfile               # dockerfile
