@@ -1,17 +1,22 @@
-# 基础server [![Build Status](https://travis-ci.org/hexiao-o/yunle-template-production.svg?branch=master)](https://travis-ci.org/hexiao-o/yunle-template-production)
+# 基础server [![Build Status](https://travis-ci.org/hexiao-o/yunle-template-node.svg?branch=master)](https://travis-ci.org/hexiao-o/yunle-template-node)
 
 如使用该前端脚手架，可以先安装
 
 1. `npm install -g yunle-cli`
 
-2. `yunle init gulp <project-name>`
+2. `yunle init node <project-name>`
 
-2. `cd <project-name> && npm install`
+3. `cd <project-name> && npm install`
 
-![前后端分离架构](doc/image.png)
+4. `npm run dev`
 
-开发过程中，你用得最多的会是`npm run dev`，但是这里还有很多其它的处理：
+## 开发流程
 
+![开发流程图](docs/images/images.png)
+
+## 相关命令
+
+> 开发过程中，你用得最多的会是`npm run dev`，但是这里还有很多其它的处理：
 
 |`npm run <script>`|用途|
 |------------------|-----------|
@@ -42,3 +47,11 @@
 ├── nodemon.josn             # nodemon配置文件
 └── process.json             # pm2配置文件
 ```
+
+## mockjs学习
+
+[http://mockjs.com/](http://mockjs.com/)
+
+## rap API文档工具学习
+
+[http://rap.taobao.org/org/index.do](http://rap.taobao.org/org/index.do)
