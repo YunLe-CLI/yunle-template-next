@@ -23,7 +23,7 @@ function inArr(data, arr) {
 function setTitle(t) {
   document.title = t;
   const i = document.createElement('iframe');
-  i.src = './images/header.png';
+  i.src = '/assets/images/header.png';
   i.style.display = 'none';
   i.onload = function load() {
     setTimeout(() => {
@@ -34,7 +34,7 @@ function setTitle(t) {
 }
 function getInfo(config, _data, cb) {
   $.ajax({
-    type: 'POST',
+    type: 'GET',
     url: config.url,
     data: _data,
     success(data) {
