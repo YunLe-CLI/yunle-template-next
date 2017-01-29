@@ -1,3 +1,3 @@
 module.exports = {
-  theme: 'default',
+  theme: 'demo',
 };
