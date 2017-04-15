@@ -3,7 +3,7 @@ const config = require('../_config.js');
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const theme = config.theme;
-const rootPath = path.join(__dirname, '../themes', theme, 'dist/assets');
+const rootPath = path.join(__dirname, '../themes', theme, 'dist');
 const themeConfig = require(path.join(__dirname, '../themes', theme, 'config/server.config.js')) || {};
 
 module.exports = {
