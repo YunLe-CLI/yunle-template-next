@@ -17,7 +17,7 @@ const model = {
   effects: {
     *init(action, { put }) {
       yield delay(2000);
-      yield put({ type: 'caculate', delta: 1 });
+      yield put({ type: 'caculate', delta: Math.random() * 100 });
     },
   },
 };

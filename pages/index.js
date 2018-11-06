@@ -1,7 +1,10 @@
 
 import Link from 'next/link';
 import React from 'react';
+import { Button } from 'antd';
 import WithDva from '../utils/store';
+
+import styles from './index.less';
 
 class Page extends React.Component {
   static async getInitialProps(props) {
@@ -24,18 +27,18 @@ class Page extends React.Component {
     const { name, count } = index;
     // console.log('rendered!!');
     return (
-      <div>
+      <div className={styles.wrap}>
       Hi,{name}!! &nbsp;
         <p>count:&nbsp; {count}</p>
         <p>
-          <button onClick={() => { this.props.dispatch({ type: 'index/caculate', delta: 1 }); }} >
+          <Button type="primary" onClick={() => { this.props.dispatch({ type: 'index/caculate', delta: 1 }); }} >
         plus
-          </button>
+          </Button>
         </p>
         <p>
-          <button onClick={() => { this.props.dispatch({ type: 'index/caculate', delta: -1 }); }} >
+          <Button type="primary" onClick={() => { this.props.dispatch({ type: 'index/caculate', delta: -1 }); }} >
           minus
-          </button>
+          </Button>
         </p>
         <p>
           <Link href="/users">

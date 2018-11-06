@@ -7,6 +7,10 @@
         "alias": {
           "dva": "dva-no-router"
         }
+      }],
+      ["import", {
+        "libraryName": "antd",
+        "style": "css"
       }]
     ]
   }

@@ -5,24 +5,31 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "next"
+    "start": "next",
+    "build": "next build"
   },
   "author": "hopperhuang",
   "license": "ISC",
   "dependencies": {
+    "@zeit/next-less": "^1.0.1",
+    "antd": "^3.10.4",
     "dva-no-router": "^1.0.3",
+    "less": "^3.8.1",
     "next": "^7.0.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
+    "@zeit/next-css": "^1.0.1",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-import": "^1.11.0",
     "babel-plugin-module-resolver": "^3.1.0",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-import-resolver-babel-module": "^4.0.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.7.0"
+    "eslint-plugin-react": "^7.7.0",
+    "next-compose-plugins": "^2.1.1"
   }
 }
