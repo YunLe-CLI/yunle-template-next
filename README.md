@@ -1,4 +1,4 @@
-# 基础server [![Build Status](https://travis-ci.org/hexiao-o/yunle-template-node.svg?branch=master)](https://travis-ci.org/hexiao-o/yunle-template-node)
+# 基于dva.js + next.js [![Build Status](https://travis-ci.org/hexiao-o/yunle-template-node.svg?branch=master)](https://travis-ci.org/hexiao-o/yunle-template-node)
 
 如使用该前端脚手架，可以先安装
 
