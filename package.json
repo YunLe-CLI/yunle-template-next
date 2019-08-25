@@ -1,7 +1,6 @@
 {
   "name": "daka",
   "version": "1.0.4",
-  "dockerURL": "registry.cn-shanghai.aliyuncs.com/laolusays/wx_daka",
   "scripts": {
     "test": "echo $npm_package_name-img-v$npm_package_version",
     "dev": "cross-env APP_ENV=development next -p 8888",
@@ -10,10 +9,7 @@
     "start:qa": "npm run build:qa && cross-env APP_ENV=qa next start",
     "build": "cross-env APP_ENV=production next build",
     "build:dev": "cross-env APP_ENV=development next build",
-    "build:qa": "cross-env APP_ENV=qa next build",
-    "build:docker": "docker build --rm -t $npm_package_name-img -f ./Dockerfile . && docker tag $npm_package_name-img $npm_package_dockerURL:$npm_package_version  && docker push $npm_package_dockerURL:$npm_package_version && docker rmi -f $npm_package_name-img",
-    "build:docker:dev": "docker build --rm -t $npm_package_name-img-dev -f ./Dockerfile.dev . && docker tag $npm_package_name-img-dev $npm_package_dockerURL:$npm_package_version-dev  && docker push $npm_package_dockerURL:$npm_package_version-dev && docker rmi -f $npm_package_name-img-dev",
-    "build:docker:qa": "docker build --rm -t $npm_package_name-img-qa -f ./Dockerfile.qa . && docker tag $npm_package_name-img-qa $npm_package_dockerURL:$npm_package_version-qa  && docker push $npm_package_dockerURL:$npm_package_version-qa && docker rmi -f $npm_package_name-img-qa"
+    "build:qa": "cross-env APP_ENV=qa next build"
   },
   "dependencies": {
     "antd": "^3.22.0",

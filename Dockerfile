@@ -1,28 +1,34 @@
-# 引用镜像
+FROM node:lts-alpine AS builder
+USER root
+WORKDIR /tmp/
+RUN apk update && \
+    apk add --update git && \
+    apk add --update openssh
+COPY ./package.json /tmp/
+RUN npm config set registry https://registry.npm.taobao.org && npm install
+
 FROM node:lts-alpine
+USER root
+WORKDIR /home/node
 
-# 作者
-MAINTAINER sean
+ENV NODE_ENV build
 
-# 执行命令，创建文件夹
-RUN mkdir -p /www
+COPY --from=builder /tmp/node_modules ./node_modules
 
-# 将Order目录拷贝到镜像里
-COPY ./ /www
+COPY . .
 
-# 指定工作目录
-WORKDIR /www
-
-# 安装依赖及构建node应用
-# RUN npm config set registry https://registry.npm.taobao.org
-# RUN npm info underscore
-RUN npm install
 RUN npm run build
 
-
-# 将端口开放
- # Web service
 EXPOSE 3000
 
-# 容器启动命令
 CMD ["npm", "run", "start"]
+
+
+# 构建镜像
+# docker rmi yunle-cli/next:1.0.0 ; docker build --rm -f "Dockerfile" -t yunle-cli/next:1.0.0 .
+
+# 删档测试
+# docker run --rm -it -p 3000:3000 yunle-cli/next:1.0.0 bash
+
+# 单独测试
+# docker run --name next-demo -d -p 3000:3000 yunle-cli/next:1.0.0

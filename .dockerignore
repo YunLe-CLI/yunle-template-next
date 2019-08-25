@@ -1,4 +1,18 @@
-.git
-.next
-.node_modules
-.dockerimg
+# Versioning and metadata
+.git/
+.gitignore
+.dockerignore
+.idea/
+
+# Build dependencies
+dist/
+node_modules/
+.next/
+
+# Environment (contains sensitive data)
+.env
+
+# Files not required for production
+.editorconfig
+Dockerfile
+README.md
